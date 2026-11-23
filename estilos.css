@@ -1,0 +1,108 @@
+
+/* Reinicio general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding: 5px 24px;
+    color: #f2efef;
+    background-color: rgb(53, 52, 66);
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 480px;
+    margin: 0 auto;
+    border: 2px solid #f5f5f5;
+    border-radius: 20px;
+    padding: 24px 40px;
+}
+
+/* Fila de pestañas */
+.pestañas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-bottom: 26px;
+}
+
+/* Botones de las pestañas */
+.pestaña {
+    border: none;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #e8d6d6;
+    font-size: 30px;
+    padding: 8px 12px 10px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+/* Pestaña seleccionada */
+.pestaña.activa {
+    color: #b65353;
+    border-bottom-color: #222;
+}
+
+/* Texto de instrucciones */
+.instruccion {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* Panel que muestra el contenido */
+.panel {
+    min-height: 184px;
+    padding: 30px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Ocultar los paneles que no están seleccionados */
+.panel[hidden] {
+    display: none;
+}
+
+/* Texto inferior */
+.descripcion {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-top: 26px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 600px) {
+    .contenedor {
+        padding: 18px;
+    }
+
+    .pestañas {
+        gap: 1px;
+    }
+
+    .pestaña {
+        font-size: 15px;
+        padding: 8px 5px;
+    }
+
+    .instruccion,
+    .descripcion,
+    .panel {
+        font-size: 17px;
+    }
+}
